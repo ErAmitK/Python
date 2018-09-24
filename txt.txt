@@ -1,0 +1,41 @@
+### Search records from text file.
+searchText=input("Enter name for search :- ")
+file=open("E:\\Amit Tutorial\\mynewtextfile.txt","w+")
+file.write("1,Anil,30,Gurgoan,170cms,65Kg\n2,Amit,36,Delhi,150cms,95kg\n3,Abhishek,45,Noida,167cms,75Kg");
+temp=[]
+message="Record doesnot not exists."
+file=open("E:\\Amit Tutorial\\mynewtextfile.txt","r")
+for i in file:
+    found= (searchText.lower() in i.lower())  
+    if found==True:
+        message="Found"
+        temp=(i.split(","))       
+        break
+if message !="Found":
+    print(message)    
+if message =="Found":
+    print ("Press 1 : For Age\nPress 2 : For Address\nPress 3 : For Height \nPress 4 : For Weight")
+    option=input("Choose your option please :- ")
+    if option=="1":
+        print (f"Age of {searchText} is "+temp[2])
+    elif option=="2":
+        print (f"Address of {searchText} is "+temp[3])
+    elif option=="3":
+        print (f"Height of {searchText} is "+temp[4])
+    elif option=="4":
+        print (f"Weight of {searchText} is "+temp[5])
+    else:
+        print("Ivalid option.")
+file.close()
+
+=================================
+temp = []
+alphabets =input('Enter any eight letters/characters : ')
+print ('These words are combination of 3 letters which  you entered:-')
+#alphabets='ABCDEFGH'
+for a in alphabets:
+    for b in alphabets:
+        for c in alphabets:
+            if a !=b and b!=c and c!= a:
+                temp.append (a+b+c)
+print(temp)
