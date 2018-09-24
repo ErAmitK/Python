@@ -39,3 +39,19 @@ for a in alphabets:
             if a !=b and b!=c and c!= a:
                 temp.append (a+b+c)
 print(temp)
+
+======================
+## Get linear Equation 
+FirstPoint = input("Enter first point like (x,y) :- ")
+SecondPoint = input("Enter second point like (x,y):- ")
+firstlist=FirstPoint.split(",")
+secondlist=SecondPoint.split(",")
+x=""
+##use formula here
+#y=mx+b
+
+m=int((int(firstlist[1])-int(secondlist[1])))/int((int(firstlist[0])-int(secondlist[0])))
+print(m)
+ 
+#c=(int(firstlist[1])=m*x=b)
+ 
